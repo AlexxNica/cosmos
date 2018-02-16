@@ -42,7 +42,7 @@ const ClientId = styled.span`
 const PageHeader = props => {
   let Top
   if (props.actions) {
-    Top = <Actions>{props.actions}</Actions>
+    Top = <Actions actions={props.actions} />
   } else if (props.breadcrumb) {
     Top = <Breadcrumb content={props.breadcrumb.content} link={props.breadcrumb.link} />
   } else {
