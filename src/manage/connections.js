@@ -11,17 +11,23 @@ class Connections extends React.Component {
         </Paragraph>
 
         <List label="Database">
-          <Stack>
-            <div>Username-Password-Authentication</div> <div>Database</div> <Switch />
+          <Stack widths={[41, 41, 18]}>
+            <div>Username-Password-Authentication</div>
+            <div>Database</div>
+            <Switch />
           </Stack>
         </List>
 
         <List label="Social">
-          <Stack>
-            <div>github</div> <div>GitHub</div> <Switch on />
+          <Stack widths={[41, 41, 18]}>
+            <div>github</div>
+            <div>GitHub</div>
+            <Switch on />
           </Stack>
-          <Stack>
-            <div>google-oauth2</div> <div>Google</div> <Switch off />
+          <Stack widths={[41, 41, 18]}>
+            <div>google-oauth2</div>
+            <div>Google</div>
+            <Switch off />
           </Stack>
         </List>
 

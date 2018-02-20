@@ -2,11 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import { colors, spacing } from '../../../tokens'
+import { colors, spacing, fonts } from '../../../tokens'
 import Heading from '../../atoms/heading'
 
 const StyledLabel = styled.div`
-  padding: ${spacing.xsmall};
+  font-size: 12px;
+  font-weight: ${fonts.weight.medium};
+  padding: ${spacing.xsmall} 0;
+  text-transform: uppercase;
 `
 
 const StyledRow = styled.div`
@@ -24,11 +27,7 @@ const StyledList = styled.div`
 const List = props => {
   return (
     <StyledList>
-      {props.label ? (
-        <StyledLabel>
-          <Heading size={4}>{props.label}</Heading>
-        </StyledLabel>
-      ) : null}
+      {props.label ? <StyledLabel>{props.label}</StyledLabel> : null}
       {React.Children.map(props.children, child => <StyledRow>{child}</StyledRow>)}
     </StyledList>
   )
