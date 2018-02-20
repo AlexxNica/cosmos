@@ -5,9 +5,21 @@ import { PageHeader, List, Stack, Code, Button, ButtonGroup } from '../component
 import Avatar from './client-avatar'
 import { colors, spacing } from '../tokens'
 
+const StyledLogo = styled.span`
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+`
+
 const Link = styled.a`
   color: ${colors.link.default};
   text-decoration: none;
+`
+
+const ClientID = styled.span`
+  font-size: 13px;
+  color: ${colors.base.grayDarkest};
+  margin-right: ${spacing.xsmall};
 `
 
 const Type = styled.div`
@@ -17,12 +29,6 @@ const Type = styled.div`
   line-height: normal;
   margin-top: ${spacing.xsmall};
   text-transform: uppercase;
-`
-
-const StyledLogo = styled.span`
-  width: 48px;
-  height: 48px;
-  display: inline-block;
 `
 
 const clients = [
@@ -74,7 +80,7 @@ class ClientList extends React.Component {
                 <Type>{client.type}</Type>
               </div>
               <Stack align="left">
-                <span>Client Id: </span>
+                <ClientID>Client ID</ClientID>
                 <Code>{client.id}</Code>
               </Stack>
               <ButtonGroup align="right">
