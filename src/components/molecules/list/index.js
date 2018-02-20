@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import { colors, spacing, fonts } from '../../../tokens'
-import Heading from '../../atoms/heading'
 
 const StyledLabel = styled.div`
   font-size: 12px;
